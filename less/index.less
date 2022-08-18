@@ -1,0 +1,366 @@
+// out: ../css/
+@import 'base.less';
+
+// @rootSize:3.75vw;
+
+@vw: 3.75vw;
+
+// 头部
+header {
+    width: 100%;
+    height: (70 / @vw);
+
+    // background-color: pink;
+
+    text-align: center;
+    .headimg {
+        width: (300 / @vw);
+        height: (50 / @vw);
+    }
+}
+
+// 轮播图
+.focus {
+    overflow: hidden;
+    position: relative;
+}
+.focus img {
+    width: 100%;
+}
+.focus ul {
+    /* ul没有高度，里面的子元素又是浮动的，必然会引起格式混乱
+    因此需要清除浮动 */
+    display: flex;
+    // overflow: hidden;
+    width: 500%;
+    /* 显示第一张图片，而不是复制的第三张图片 */
+    margin-left: -100%;
+}
+.focus ul li {
+    // float: left;
+    /* 注意：图片的宽度为100%,占满父盒子,而图片的父盒子小li没有宽度，则找ul
+       而ul得宽度设为500%,所以图片得宽度也被拉长了
+       因此需要给li设置宽度，每个小li占ul的1/5 */
+    width: 20%;
+}
+.focus ol {
+    position: absolute;
+    bottom: (5 / @vw);
+    transform: translate(-50%);
+    left: 50%;
+    margin: 0;
+}
+.focus ol li {
+    /* 使其变成行内块元素，就可以浮动一排显示 */
+    display: inline-block;
+    width: (5 / @vw);
+    height: (5 / @vw);
+    border-radius: (2 / @vw);
+    background-color: #707070;
+    list-style: none;
+    transition: all .3s;
+}
+.focus ol li.current {
+    width: (15 / @vw);
+}
+
+// 导航
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    li{
+        width: 25%;
+        background: #efefef;
+        line-height: (50 / @vw);
+        text-align: center;
+        font-size: (16 / @vw);
+        font-family: "微软雅黑";
+        color: #3e3e3e;
+        border: (1 / @vw) solid #cdcdcd;
+        border-top: none;
+        border-right: none;
+
+        a {
+            display: block;
+            padding-top: 50%;
+        }
+        .n1 {
+            background: url(../images/1.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+        .n2 {
+            background: url(../images/2.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+        .n3 {
+            background: url(../images/3.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+        .n4 {
+            background: url(../images/4.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+        .n5 {
+            background: url(../images/5.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+        .n6 {
+            background: url(../images/6.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+        .n7 {
+            background: url(../images/7.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+        .n8 {
+            background: url(../images/8.png) no-repeat center 20%;
+            background-size: 50% auto;
+        }
+    }
+
+}
+
+// 产品
+.goods {
+    margin-top: (32 / @vw);
+
+    .tt {
+        font-weight: bold;
+        font-style: normal;
+        text-transform: uppercase;
+        text-align: center;
+        background: url(../images/goods0.png) no-repeat center top;
+        font-size: (32 / @vw);
+        font-family: "微软雅黑";
+        color: #005ca1;
+        line-height: (42 / @vw);
+        background-size: 70%;
+        height: (50 / @vw);
+    }
+
+    li {
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        width: 43.0%;
+        margin: 2% 3%;
+
+        a {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                // vertical-align: middle;
+                border: (2 / @vw) solid #e4e4e4;
+            }
+
+            h3 {
+                width: 100%;
+                height: (36 / @vw);
+                text-align: center;
+                background: #e4e4e4;
+                color: #333333;
+                font-size: (16 / @vw);
+                font-weight: normal;
+                line-height: (36 / @vw);
+            }
+        }
+    }
+}
+
+// 案例
+.case {
+    // display: flex;
+    margin-top: (28 / @vw);
+    font-family: "微软雅黑";
+    background-size: 100%;
+    // background-color: pink;
+
+    .tt1 {
+        
+        font-style: normal;
+        text-transform: uppercase;
+        background: #005ca1;
+        background-size: 90%;
+        color: #fff;
+        text-align: left;
+        padding-left: 5%;
+        font-weight: normal;
+        font-size: (32 / @vw);
+        font-family: "微软雅黑";
+        height: (62 / @vw);
+        line-height: (55 / @vw);
+
+        a {
+            display: inline-block;
+            background: url(../images/more1.png) no-repeat 78% center;
+            padding-right: 12%;
+            margin-left: (130 / @vw);
+            color: #fff;
+            font-weight: normal;
+            background-size: 30%;
+            font-size: (18 / @vw);
+        }
+    }
+
+// 案例内容
+    .content {
+        margin-top: (16 / @vw);
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 1%;
+
+            li {
+                width: 45%;
+                // float: left;
+                margin: 0 (9 / @vw) (15 / @vw);
+
+                a.img {
+                    display: block;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: (120 /@vw);
+                    }
+                }
+
+                h3 {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    line-height: (45 / @vw);
+                    height: (45 / @vw);
+                    text-align: center;
+                    font-size: (16 / @vw);
+                    color: #fff;
+                    background: url(../images/case_mask.png);
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
+// 
+.news {
+    // display: flex;
+    margin-top: (28 / @vw);
+    font-family: "微软雅黑";
+    margin-bottom: (120 / @vw);
+    // background: pink;
+
+    .tt1 {
+        
+        font-style: normal;
+        text-transform: uppercase;
+        background: #005ca1;
+        background-size: 90%;
+        color: #fff;
+        text-align: left;
+        padding-left: 5%;
+        font-weight: normal;
+        font-size: (32 / @vw);
+        font-family: "微软雅黑";
+        height: (62 / @vw);
+        line-height: (55 / @vw);
+
+        a {
+            display: inline-block;
+            background: url(../images/more1.png) no-repeat 78% center;
+            padding-right: 12%;
+            margin-left: (130 / @vw);
+            color: #fff;
+            font-weight: normal;
+            background-size: 30%;
+            font-size: (18 / @vw);
+        }
+    }
+
+    ul {
+        padding: (15 /@vw) 2% 0;
+
+        li {
+            font-size: (16 / @vw);
+            border-bottom: (1 / @vw) solid #e4e4e4;
+            text-align: left;
+            padding: 5% 0;
+
+            .nei-new {
+                font-size: (14 / @vw);
+                line-height: (25 / @vw);
+            }
+
+            a {
+                color: #333333;
+                display: block;
+                text-align: left;
+                font-size: (16 / @vw);
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// 底部导航栏
+.footer {
+    background: #005ca1;
+    display: -webkit-box;
+    width: 100%;
+    z-index: 999;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+
+    a {
+        -webkit-box-flex: 1;
+        display: -webkit-box;
+        color: #fff;
+        width: 25%;
+    }
+
+    span {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font: 400 (16 / @vw)/11vw "微软雅黑";
+        color: #fff;
+        text-align: center;
+        padding-top: 50%;
+    }
+
+    span.span1 {
+        background: url(../images/footer1.png) center (12 / @vw) no-repeat;
+        background-size: 32% auto;
+    }
+
+    span.span2 {
+        background: url(../images/footer2.png) center (12 / @vw) no-repeat;
+        background-size: 32% auto;
+    }
+
+    span.span3 {
+        background: url(../images/footer3.png) center (12 / @vw) no-repeat;
+        background-size: 32% auto;
+    }
+
+    span.span4 {
+        background: url(../images/footer4.png) center (12 / @vw) no-repeat;
+        background-size: 32% auto;
+    }
+
+    span.span5 {
+        background: url(../images/footer5.png) center (12 / @vw) no-repeat;
+        background-size: 32% auto;
+    }
+}
