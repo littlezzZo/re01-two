@@ -31,7 +31,7 @@ li {
 }
 header {
   width: 100%;
-  height: 18.66666667vw;
+  height: 16vw;
   text-align: center;
 }
 header .headimg {
@@ -176,68 +176,84 @@ header .headimg {
   font-weight: normal;
   line-height: 9.6vw;
 }
+/*
+// 案例
 .case {
-  margin-top: 7.46666667vw;
-  font-family: "微软雅黑";
-  background-size: 100%;
+    // display: flex;
+    margin-top: (28 / @vw);
+    font-family: "微软雅黑";
+    background-size: 100%;
+    // background-color: pink;
+
+    .tt1 {
+        
+        font-style: normal;
+        text-transform: uppercase;
+        background: #005ca1;
+        background-size: 90%;
+        color: #fff;
+        text-align: left;
+        padding-left: 5%;
+        font-weight: normal;
+        font-size: (32 / @vw);
+        font-family: "微软雅黑";
+        height: (62 / @vw);
+        line-height: (55 / @vw);
+
+        a {
+            display: inline-block;
+            background: url(../images/more1.png) no-repeat 78% center;
+            padding-right: 12%;
+            margin-left: (130 / @vw);
+            color: #fff;
+            font-weight: normal;
+            background-size: 30%;
+            font-size: (18 / @vw);
+        }
+    }
+
+// 案例内容
+    .content {
+        margin-top: (16 / @vw);
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 1%;
+
+            li {
+                width: 45%;
+                // float: left;
+                margin: 0 (9 / @vw) (15 / @vw);
+
+                a.img {
+                    display: block;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: (120 /@vw);
+                    }
+                }
+
+                h3 {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    line-height: (45 / @vw);
+                    height: (45 / @vw);
+                    text-align: center;
+                    font-size: (16 / @vw);
+                    color: #fff;
+                    background: url(../images/case_mask.png);
+                    font-weight: normal;
+                }
+            }
+        }
+    }
 }
-.case .tt1 {
-  font-style: normal;
-  text-transform: uppercase;
-  background: #005ca1;
-  background-size: 90%;
-  color: #fff;
-  text-align: left;
-  padding-left: 5%;
-  font-weight: normal;
-  font-size: 8.53333333vw;
-  font-family: "微软雅黑";
-  height: 16.53333333vw;
-  line-height: 14.66666667vw;
-}
-.case .tt1 a {
-  display: inline-block;
-  background: url(../images/more1.png) no-repeat 78% center;
-  padding-right: 12%;
-  margin-left: 34.66666667vw;
-  color: #fff;
-  font-weight: normal;
-  background-size: 30%;
-  font-size: 4.8vw;
-}
-.case .content {
-  margin-top: 4.26666667vw;
-}
-.case .content ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 1%;
-}
-.case .content ul li {
-  width: 45%;
-  margin: 0 2.4vw 4vw;
-}
-.case .content ul li a.img {
-  display: block;
-  position: relative;
-}
-.case .content ul li a.img img {
-  width: 100%;
-  height: 32vw;
-}
-.case .content ul li h3 {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  line-height: 12vw;
-  height: 12vw;
-  text-align: center;
-  font-size: 4.26666667vw;
-  color: #fff;
-  background: url(../images/case_mask.png);
-  font-weight: normal;
-}
+*/
 .news {
   margin-top: 7.46666667vw;
   font-family: "微软雅黑";
